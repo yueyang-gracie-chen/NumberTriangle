@@ -90,8 +90,27 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-        // TODO implement this method
-        return -1;
+        if (path == null || path.isEmpty()) {
+            return this.root;
+        }
+        NumberTriangle cur = this;
+        for (int i = 0; i < path.length(); i++) {
+            char c = path.charAt(i);
+            if (c == 'l') {
+                if (cur.left == null) {
+                    throw new IllegalArgumentException("Path too deep at index " + i + " (no left child).");
+                }
+                cur = cur.left;
+            } else if (c == 'r') {
+                if (cur.right == null) {
+                    throw new IllegalArgumentException("Path too deep at index " + i + " (no right child).");
+                }
+                cur = cur.right;
+            } else {
+                throw new IllegalArgumentException("Invalid path character: '" + c + "' at index " + i);
+            }
+        }
+        return cur.root;
     }
 
     /** Read in the NumberTriangle structure from a file.
