@@ -9,9 +9,9 @@ what you are tasked with for this task.
 - To ensure that you have learned the basics of using git and GitHub to be able to contribute to your team.
 - To practice reading in data from an outside source and creating objects to represent that data.
 
-## The Task:
+## The Task: 
 
-- [ ] Fork this repo and clone a local copy to work in.
+- [√] Fork this repo and clone a local copy to work in.
 
 - [ ] Read the provided `NumberTriange.java` file to understand the definition of a number triangle and what
       methods and variables we have defined to represent the structure.
